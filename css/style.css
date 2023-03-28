@@ -18,6 +18,7 @@ html {
     box-sizing: border-box;
 }
 
+*,
 *::before,
 *::after {
     box-sizing: inherit;
@@ -66,6 +67,12 @@ p {
     margin: 0;
 }
 
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
 .flex {
     display: flex;
 }
@@ -92,12 +99,6 @@ p {
     border-bottom: 1px solid #cacad6;
 }
 
-.container {
-    max-width: 1220px;
-    padding: 0 10px;
-    margin: 0 auto;
-}
-
 .nav {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -119,7 +120,7 @@ p {
 }
 
 .basket--on span {
-    display: flex;
+    display: none;
     font-size: 11px;
     color: #fff;
     width: 15px;
@@ -361,6 +362,7 @@ p {
     position: relative;
     margin-bottom: 100px;
     text-align: center;
+    overflow: hidden;
 }
 
 .bay__bg {
@@ -377,11 +379,15 @@ p {
 }
 
 @keyframes line-text {
-    from {
+    0% {
+        display: none;
         transform: translateX(100%);
         transform-origin: left center;
     }
-    to {
+    50% {
+        display: block;
+    }
+    100% {
         transform: translateX(-100%);
         transform-origin: right center;
     }
@@ -455,6 +461,64 @@ p {
 }
 
 /* -----------------------------------PROMO----------------------------------- */
+/* -----------------------------------ACCESSORIES----------------------------------- */
+
+.acessories__title {
+    margin-bottom: 30px;
+}
+
+.accessories__text {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.accessories__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.accessories__item {
+    padding: 20px;
+    border: 1px solid #BC10D8;
+    border-image: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    border-image-slice: 1;
+}
+
+.accessories__content-img {
+    margin-bottom: 10px;
+}
+
+.accessories__content {
+    height: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 42px;
+}
+
+.accessories__content-price {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.accessories__content-link {
+    display: inline-block;
+    padding: 6px 89px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #BC10D8 40%, rgba(80, 0, 250, 0.93) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid #BC10D8;
+    border-image: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    border-image-slice: 1;
+}
+
+/* -----------------------------------ACCESSORIES----------------------------------- */
+
 
 
 
