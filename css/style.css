@@ -1,14 +1,14 @@
 /* -----------------------------------GLOBAL----------------------------------- */
 
 @font-face {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Helvetica';
     src: url('../fonts/helvetica.woff2');
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Helvetica-Bold', sans-serif;
+    font-family: 'Helvetica-Bold';
     src: url('../fonts/Helvetica-Bold.ttf;');
     font-style: normal;
     font-weight: 700;
@@ -308,7 +308,6 @@ p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
 }
 
 .game__descr-text {
