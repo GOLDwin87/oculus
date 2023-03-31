@@ -102,12 +102,12 @@ p {
 .nav {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    align-items: center;
     height: 80px;
 }
 
 .menu {
     gap: 0 20px;
+    padding: 0;
 }
 
 .logo {
@@ -452,12 +452,49 @@ p {
 }
 
 .promo__btn {
+    position: relative;
     margin-top: auto;
     width: 50px;
     height: 50px;
     color: #fff;
     background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
     border-radius: 50%;
+}
+
+.promo__btn:hover:after,
+.promo__btn:hover:before {
+    content: '';
+    position: absolute;
+    border: 1.5px solid #da7ce9c5;
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    opacity: 0;
+    animation: pulse 1s ease-out;
+}
+
+.promo__btn:hover:after {
+    animation-delay: 0.3s;
+}
+
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.8);
+    }
 }
 
 /* -----------------------------------PROMO----------------------------------- */
@@ -519,7 +556,67 @@ p {
 
 /* -----------------------------------ACCESSORIES----------------------------------- */
 
+/* -----------------------------------OCNTACTS----------------------------------- */
 
+.contacts__title {
+    margin-bottom: 9px;
+}
+
+.contacts__form {
+    grid-template-columns: 1fr 1fr;
+    border-right: 1px solid #CACAD6;
+}
+
+.form__wrapper {
+    padding: 5px;
+    border-bottom: 1px solid #CACAD6;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form__input {
+    border: none;
+    width: 80%;
+}
+
+.form__btn {
+    width: 50px;
+    height: 50px;
+    background: #CACAD6;
+    border-radius: 50%;
+}
+
+.form__text {
+    font-size: 13px;
+    line-height: 15px;
+    color: #5C5C5E;
+}
+
+.mail {
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 18px;
+}
+
+/* -----------------------------------OCNTACTS----------------------------------- */
+
+/* -----------------------------------FOOTER----------------------------------- */
+
+.footer {
+    padding: 30px 0;
+    border-top: 1px solid #cacad6;
+    border-bottom: 1px solid #cacad6;
+}
+
+.social-media {
+    justify-content: flex-end;
+}
+
+.social-media__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* -----------------------------------FOOTER----------------------------------- */
 
 
 
